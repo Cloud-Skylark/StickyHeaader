@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+
+    kotlin("plugin.serialization") version "2.1.0"
 }
 
 android {
@@ -28,14 +30,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
     buildFeatures {
-        compose = true
+        compose = false
     }
 }
 
@@ -56,4 +58,14 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    //implementation("androidx.core:core-splashscreen:1.0.0")
+
+    val navversion = "2.8.6"
+
+    implementation("androidx.navigation:navigation-compose:$navversion")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+
+
+
+    
 }

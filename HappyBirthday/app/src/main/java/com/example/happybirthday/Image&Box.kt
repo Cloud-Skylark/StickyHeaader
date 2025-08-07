@@ -50,6 +50,11 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
         )
     }
 }
+
+@Composable
+fun GreetingText(message: String, from: String, modifier: Modifier) {
+    TODO("Not yet implemented")
+}
 // This function can Contain Two function 1) is Image and 2) Text
 // The Main Access in MainActivity.kt file onCreate calling
 

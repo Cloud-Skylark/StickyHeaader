@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 @Preview(showBackground = true, showSystemUi = true, device = "spec:width=1080px,height=2424px,navigation=buttons")
-private fun Usrsticky() {
+private fun UsrstickyPreview() {
     UsrStickyHeader()
 }
 
